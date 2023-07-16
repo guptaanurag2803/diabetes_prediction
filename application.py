@@ -13,7 +13,7 @@ model = pickle.load(open('./Model/modelForPrediction.pkl', 'rb'))
 def index():
     return render_template('index.html')
 
-@app.route('/predictdata', methods=['POST', 'GET'])
+@app.route('/predictdata', methods=['GET', 'POST'])
 def predict_datapoint():
     result = ""
 
