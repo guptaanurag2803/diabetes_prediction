@@ -1,8 +1,8 @@
-from flask import Flask, request, app, render_template
+from flask import Flask, request, render_template
 import pickle
 
 application = Flask(__name__)
-app=application
+app = application
 
 scaler = pickle.load(open("./Model/standardScaler.pkl", "rb"))
 model = pickle.load(open("./Model/decisiontreemodel.pkl", "rb"))
